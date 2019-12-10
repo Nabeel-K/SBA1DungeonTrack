@@ -1,0 +1,28 @@
+html{
+    height:100%;
+}
+body{
+    min-height:100%;
+    background-color:#dad2aa;
+}
+
+.landing-header{
+    background-color:#c5cab9;
+    border: solid #371d37; 
+    height:20vh;
+
+}
+
+div > h1, div > h3{
+    width:100%;
+    display:block;
+    text-align: center;
+}
+
+.sidebar{
+    background-color:#ead2a3;
+    border: solid #371d37
+}
+.page-column{
+    border: solid #371d37;
+}

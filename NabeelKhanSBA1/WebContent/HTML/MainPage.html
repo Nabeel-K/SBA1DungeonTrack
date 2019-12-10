@@ -1,0 +1,75 @@
+<!-- 
+Name: MainPage.html
+Desc: This is the main home page of the site. It will give a brief description about the site and a menu to the three other pages: Inventory, Dice, and contact us
+Author: Nabeel Khan
+Date Created: 12-10-19
+Date Last Updated: 12-10-19
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DungeonTrack</title>
+    
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!--External Css-->
+    <link href="style/main.css" rel="stylesheet" type = "text/css">
+
+    <!--Internal Styling -->
+    <style>
+        .image-link{
+            margin:10px;
+            display: inline-block;
+        }     
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid">
+        
+        <div class="row landing-header">
+            <h1>Dungeon Track</h1>
+            <h3>Inventory and Die roller</h3>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-3 col-lg-2 sidebar" >
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./MainPage.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Inventory.html">Inventory Tracker</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./DiceRoller.html">Dice Roller</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./ContactUs.html">Contact Us</a>
+                  </li>
+                </ul>
+            </div>
+            
+            <div class="col-sm-9 col-lg-10 page-column" style="text-align: center">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis venenatis, massa sit amet facilisis ornare, sapien sapien tempor nulla, a convallis elit erat at metus. Duis hendrerit placerat pellentesque. Nullam convallis pretium porta. Duis erat mi, semper eget ligula in, pulvinar efficitur mauris. Nam a maximus purus. Donec suscipit orci a est fringilla eleifend. Donec posuere pulvinar neque ac ornare.</p>
+                
+                
+                   
+                        <a class="image-link" href='./Inventory.html'><img  src="./images/potion.jpg" width="200" height="200" /><p>To Inventory</p></a>
+                
+                        <a class="image-link" href='./DiceRoller.html'><img src="./images/dice.png" width="200" height="200"/><p>To Dice Roller</p></a>
+                
+                        <a class="image-link" href='./ContactUs.html'><img src="./images/contact.jpg" width="200" height="200" /><p>Contact Us</p></a>
+                
+                <p>
+                    Phasellus aliquet feugiat auctor. Aenean convallis vestibulum tortor et imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Phasellus vitae metus volutpat, suscipit ante vel, molestie augue. Vivamus id enim enim. Morbi ante lectus, placerat vel placerat eu, suscipit at turpis. Aliquam vitae libero nisl. Aliquam maximus magna vel nibh rutrum ultrices. Donec diam turpis, mollis eget fermentum nec, accumsan ut nibh. Aenean quis sodales nisl. Praesent nec augue in urna tempus feugiat quis pretium nunc. Ut egestas purus fermentum, luctus ante at, consectetur dui. Etiam mollis et mi sed malesuada. In volutpat, risus sit amet dictum pharetra, libero massa finibus elit, et imperdiet tellus sapien a nibh.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

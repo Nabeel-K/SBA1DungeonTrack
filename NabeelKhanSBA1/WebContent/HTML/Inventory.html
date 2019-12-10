@@ -1,0 +1,118 @@
+<!-- 
+Name: Inventory.html
+Desc: This is the page that keeps track of the users' character's inventory
+Author: Nabeel Khan
+Date Created: 12-10-19
+Date Last Updated: 12-10-19
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>DungeonTrack-Inventory</title>
+
+<!--Bootstrap -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+
+<!--External Css-->
+<link href="style/main.css" rel="stylesheet" type="text/css">
+
+<!--Internal Styling -->
+<style>
+	table, th, td {
+		border: 1px solid black;
+		text-align: center
+	}
+	
+	tbody>tr>td:first-child {
+		font-weight: bold;
+		
+		
+	}
+	
+	.item_image{
+		width:7px;
+		height:7px;
+	}
+</style>
+
+</head>
+<body>
+	<div class="container-fluid">
+
+		<div class="row landing-header">
+			<h1>Dungeon Track</h1>
+			<h3>Character Inventory Tracker Tool</h3>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-3 col-lg-2 sidebar">
+				<ul class="nav flex-column">
+					<li class="nav-item"><a class="nav-link"
+						href="./MainPage.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./Inventory.html">Inventory Tracker</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./DiceRoller.html">Dice Roller</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="./ContactUs.html">Contact Us</a></li>
+				</ul>
+			</div>
+
+			<div class="col-sm-9 col-lg-10 page-column">
+				<form>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Current Quantity</th>
+								<th>Quantity to Add</th>
+								<th>Quantity to Subtract</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Potions -->
+							<tr>
+								<td>Potions <img src="./images/potion.jpg" width="70" height="70"/></td>
+								<td>
+									<p class="potionCount">0</p>
+								</td>
+								<td><input id="potionAdder" type="text" name="potionAdd" />
+								</td>
+								<td><input id="potionSubtractor" type="text"
+									name="potionSub" /></td>
+							</tr>
+
+							<!--Arrows -->
+							<tr>
+								<td>Arrows <img src="./images/arrow.jpg" width="70" height="70"/></td>
+								<td>
+									<p class="arrowCount">0</p>
+								</td>
+								<td><input id="arrowAdder" type="text" name="arrowAdd" /></td>
+								<td><input id="arrowSubtractor" type="text" name="arrowSub" />
+								</td>
+							</tr>
+
+							<!-- Submit -->
+							<tr>
+								<td colspan="4"><input type="submit"
+									value="Update Inventory" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

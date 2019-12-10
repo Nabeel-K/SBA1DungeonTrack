@@ -1,0 +1,112 @@
+<!-- 
+Name: DiceRoller.html
+Desc: This page simulates a standard set of dice that a player can use when playing Dungeons and Dragons
+Author: Nabeel Khan
+Date Created: 12-10-19
+Date Last Updated: 12-10-19
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DungeonTrack DiceRoller</title>
+    
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!--External Css-->
+    <link href="style/main.css" rel="stylesheet" type = "text/css">
+    
+    <!-- External JS -->
+    <script type="text/javascript" src="./scripts/dice.js"></script>
+
+    <!--Internal Styling -->
+    <style>
+        table, th, td{
+            border:1px solid black;
+        }
+    </style>
+    
+    
+
+</head>
+<body>
+    <div class="container-fluid">
+        
+        <div class="row landing-header">
+            <h1>Dungeon Track</h1>
+            <h3>Dice Roller</h3>
+        </div>
+        <div class="row">
+            
+            <div class="col-sm-3 col-lg-2 sidebar">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./MainPage.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Inventory.html">Inventory Tracker</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./DiceRoller.html">Dice Roller</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./ContactUs.html">Contact Us</a>
+                  </li>
+                </ul>
+            </div>
+            
+            <div class="col-sm-9 col-lg-10 page-column">
+            <form onSubmit="checkDie(event)">
+                <table>
+                    <tr>
+                        <th>Die Type</th>
+                        <th>Amount of Dice to roll</th>
+                        <th>Modifier</th>
+                        <th>Result</th>
+                    </tr>
+                    
+            <!-- Dice -->
+                    <tr>
+                        <td>
+                               <select class="form-control" id="diceChoice">
+							      <option value="d4">D4</option>
+							      <option value="d6">D6</option>
+							      <option value="d8">D8</option>
+							      <option value="d10">D10</option>
+							      <option value="d12">D12</option>
+							      <option value="d20">D20</option>
+							      
+							    </select>
+                        </td>
+                        
+                        <td>
+                            <input id="d4Amount" 
+                                   class="amount"
+                                   type="text" name="d4count"/>
+                        </td>
+                        
+                           
+                        <td>
+                            <input id="d4Modifier" 
+                                   class="modifier"
+                                   type="text" name="d4count"/>
+                        </td>
+                        
+                        <td>
+                            <textarea id="resultScreen" rows="6" cols="40" disabled>
+                            </textarea>
+                            <input type="submit" value="Roll!" name="roll" />
+                        </td>
+                    </tr>
+                    
+                </table>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
