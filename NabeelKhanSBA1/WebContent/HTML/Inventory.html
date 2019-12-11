@@ -3,7 +3,7 @@ Name: Inventory.html
 Desc: This is the page that keeps track of the users' character's inventory
 Author: Nabeel Khan
 Date Created: 12-10-19
-Date Last Updated: 12-10-19
+Date Last Updated: 12-11-19
 -->
 
 <!DOCTYPE html>
@@ -25,27 +25,28 @@ Date Last Updated: 12-10-19
 <!--External Css-->
 <link href="style/main.css" rel="stylesheet" type="text/css">
 
+<!-- External JS -->
+<script type="text/javascript" src="./scripts/inventory.js"></script>
+
 <!--Internal Styling -->
 <style>
-	table, th, td {
-		border: 1px solid black;
-		text-align: center
-	}
-	
-	tbody>tr>td:first-child {
-		font-weight: bold;
-		
-		
-	}
-	
-	.item_image{
-		width:7px;
-		height:7px;
-	}
+table, th, td {
+	border: 1px solid black;
+	text-align: center
+}
+
+tbody>tr>td:first-child {
+	font-weight: bold;
+}
+
+.item_image {
+	width: 7px;
+	height: 7px;
+}
 </style>
 
 </head>
-<body>
+<body onLoad="getInventory()")>
 	<div class="container-fluid">
 
 		<div class="row landing-header">
@@ -68,7 +69,7 @@ Date Last Updated: 12-10-19
 			</div>
 
 			<div class="col-sm-9 col-lg-10 page-column">
-				<form>
+				<form id="inventoryForm" onSubmit="updateInventory(event)" )>
 					<table>
 						<thead>
 							<tr>
@@ -81,25 +82,25 @@ Date Last Updated: 12-10-19
 						<tbody>
 							<!-- Potions -->
 							<tr>
-								<td>Potions <img src="./images/potion.jpg" width="70" height="70"/></td>
+								<td>Potions <img src="./images/potion.jpg" width="70"
+									height="70" /></td>
 								<td>
-									<p class="potionCount">0</p>
+									<p id="potionCount"></p>
 								</td>
-								<td><input id="potionAdder" type="text" name="potionAdd" />
+								<td><input id="potionAdder" type="number" name="potionAdd" />
 								</td>
-								<td><input id="potionSubtractor" type="text"
-									name="potionSub" /></td>
+								<td><input id="potionSubtractor" type="number" name="potionSub" /></td>
 							</tr>
 
 							<!--Arrows -->
 							<tr>
-								<td>Arrows <img src="./images/arrow.jpg" width="70" height="70"/></td>
+								<td>Arrows <img src="./images/arrow.jpg" width="70"
+									height="70" /></td>
 								<td>
-									<p class="arrowCount">0</p>
+									<p id="arrowCount"></p>
 								</td>
-								<td><input id="arrowAdder" type="text" name="arrowAdd" /></td>
-								<td><input id="arrowSubtractor" type="text" name="arrowSub" />
-								</td>
+								<td><input id="arrowAdder" type="number" name="arrowAdd" /></td>
+								<td><input id="arrowSubtractor" type="number" name="arrowSub" /></td>
 							</tr>
 
 							<!-- Submit -->

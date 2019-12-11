@@ -25,6 +25,9 @@ Date Last Updated: 12-10-19
 <!--External Css-->
 <link href="style/main.css" rel="stylesheet" type="text/css">
 
+<!-- External JS -->
+<script type="text/javascript" src="./scripts/validateContact.js"></script>
+
 <!--Internal Styling -->
 <style>
 </style>
@@ -55,16 +58,23 @@ Date Last Updated: 12-10-19
 			<div class="col-sm-9 col-lg-10 page-column">
 				<p>Have a question? Leave your information and we'll get back to
 					you ASAP!</p>
-
-				<form>
+				
+				<!-- This message only shows after a submit, successful or not -->
+				<p id="hiddenMessage"></p>
+				
+				<form id="commentBox" onSubmit="validateContact(event)">
 					<p>
 						Name <input type="text" name="name" required />
 					</p>
+
 					<p>
 						Email <input type="email" name="email" />
 					</p>
+
 					<p>Comment</p>
+
 					<textarea id="commentbox" rows="5" cols="50"></textarea>
+					<input type="submit" value="Send" name="commentSubmit" />
 
 				</form>
 			</div>

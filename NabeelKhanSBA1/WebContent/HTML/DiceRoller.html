@@ -59,7 +59,7 @@ Date Last Updated: 12-10-19
             </div>
             
             <div class="col-sm-9 col-lg-10 page-column">
-            <form onSubmit="checkDie(event)">
+            <form onSubmit="validateDieInput(event)">
                 <table>
                     <tr>
                         <th>Die Type</th>
@@ -71,32 +71,32 @@ Date Last Updated: 12-10-19
             <!-- Dice -->
                     <tr>
                         <td>
-                               <select class="form-control" id="diceChoice">
-							      <option value="d4">D4</option>
-							      <option value="d6">D6</option>
-							      <option value="d8">D8</option>
-							      <option value="d10">D10</option>
-							      <option value="d12">D12</option>
-							      <option value="d20">D20</option>
-							      
-							    </select>
+                             <select class="form-control" id="diceChoice">
+						      <option value="d4">D4</option>
+						      <option value="d6">D6</option>
+						      <option value="d8">D8</option>
+						      <option value="d10">D10</option>
+						      <option value="d12">D12</option>
+						      <option value="d20">D20</option>
+						      
+						    </select>
                         </td>
                         
                         <td>
-                            <input id="d4Amount" 
+                            <input id="Amount" 
                                    class="amount"
-                                   type="text" name="d4count"/>
+                                   type="text" name="modifier"/>
                         </td>
                         
                            
                         <td>
-                            <input id="d4Modifier" 
+                            <input id="Modifier" 
                                    class="modifier"
-                                   type="text" name="d4count"/>
+                                   type="text" name="modifier"/>
                         </td>
                         
                         <td>
-                            <textarea id="resultScreen" rows="6" cols="40" disabled>
+                            <textarea id="resultScreen" rows="20" cols="40" disabled>
                             </textarea>
                             <input type="submit" value="Roll!" name="roll" />
                         </td>
